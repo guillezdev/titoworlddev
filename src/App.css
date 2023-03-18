@@ -31,10 +31,12 @@
 }
 
 .main-registry-client {
+  justify-content: flex-start;
   margin-top: auto;
   margin-left: 12rem;
 }
 .main-registry-establishment {
+  justify-content: flex-start;
   margin-top: auto;
   margin-right: 12rem;
 }
