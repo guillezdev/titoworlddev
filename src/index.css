@@ -1,6 +1,7 @@
 @import './styles/buttons.css';
 @import './styles/inputs.css';
 @import './styles/links.css';
+@import './styles/forms.css';
 
 * {
   margin: 0;
