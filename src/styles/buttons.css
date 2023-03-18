@@ -6,6 +6,9 @@
   font-weight: 600;
   padding: 0.75rem 4rem;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   border-radius: 100rem;
   -webkit-border-radius: 100rem;
@@ -17,5 +20,4 @@
 .button .icon {
   left: 1rem;
   position: absolute;
-  top: auto;
 }

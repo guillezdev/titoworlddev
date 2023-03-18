@@ -30,12 +30,6 @@ label {
   left: 24px;
   /* 50% - la mitad de font-size en este caso 1rem */
   top: calc(50% - 0.5rem);
-
-  transition: 0.2s ease all;
-  -moz-transition: 0.2s ease all;
-  -webkit-transition: 0.2s ease all;
-  -ms-transition: 0.2s ease all;
-  -o-transition: 0.2s ease all;
 }
 
 input:focus ~ label,
