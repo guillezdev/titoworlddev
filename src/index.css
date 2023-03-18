@@ -1,5 +1,6 @@
 @import './styles/buttons.css';
 @import './styles/inputs.css';
+@import './styles/links.css';
 
 * {
   margin: 0;
@@ -34,12 +35,4 @@ body::before {
   top: 0;
   width: 100%;
   z-index: -10;
-}
-
-a {
-  color: #0083fd;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
 }
