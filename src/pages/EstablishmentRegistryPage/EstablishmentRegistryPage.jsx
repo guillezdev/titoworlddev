@@ -78,7 +78,7 @@ export default function EstablishmentRegistryPage() {
 
           <div className="input-group">
             <input required="required" type="text" id="form__email" />
-            <label htmlFor="form__email">Provincia</label>
+            <label htmlFor="form__email">Correo electrónico</label>
             <div className="input__icon">
               <MdEmail />
             </div>
