@@ -3,17 +3,16 @@
 @import './styles/links.css';
 @import './styles/forms.css';
 
+:root {
+  --main-transition: 0.2s ease all;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  transition: 0.2s ease all;
-  -webkit-transition: 0.2s ease all;
-  -moz-transition: 0.2s ease all;
-  -ms-transition: 0.2s ease all;
-  -o-transition: 0.2s ease all;
 }
 
 body {

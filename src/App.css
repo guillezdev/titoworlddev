@@ -8,6 +8,11 @@
   padding: 1rem;
   margin: auto;
   width: 40%;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
 }
 @media screen and (max-width: 1600px) {
   .main {

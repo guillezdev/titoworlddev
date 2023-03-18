@@ -28,8 +28,13 @@ label {
   position: absolute;
   pointer-events: none;
   left: 24px;
-  /* 50% - la mitad de font-size en este caso 1rem */
+  /*50% - la mitad de font-size en este caso 1rem */
   top: calc(50% - 0.5rem);
+  transition: var(--main-transition);
+  -moz-transition: var(--main);
+  -webkit-transition: var(--main);
+  -ms-transition: var(--main);
+  -o-transition: var(--main);
 }
 
 input:focus ~ label,
