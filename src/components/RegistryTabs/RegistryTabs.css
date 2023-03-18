@@ -1,5 +1,8 @@
 .resgistry-tabs {
-  background-color: #4d4f53;
+  margin-top: 1.5rem;
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
   border-radius: 1000px;
   -webkit-border-radius: 1000px;
   -moz-border-radius: 1000px;
@@ -14,6 +17,7 @@
   display: inline-block;
   padding: 0.5rem 2rem;
   color: #fff;
+  background-color: #4d4f53;
   border-radius: 1000px 0 0 1000px;
   -webkit-border-radius: 1000px 0 0 1000px;
   -moz-border-radius: 1000px 0 0 1000px;

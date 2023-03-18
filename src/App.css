@@ -29,3 +29,22 @@
     width: 100%;
   }
 }
+
+.main-registry-client {
+  margin-top: auto;
+  margin-left: 8rem;
+}
+.main-registry-establishment {
+  margin-top: auto;
+  margin-right: 8rem;
+}
+@media screen and (max-width: 1200px) {
+  .main-registry-client {
+    margin-top: auto;
+    margin-left: auto;
+  }
+  .main-registry-establishment {
+    margin-top: auto;
+    margin-right: auto;
+  }
+}
