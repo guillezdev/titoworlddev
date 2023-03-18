@@ -24,7 +24,7 @@ input {
 }
 
 label {
-  color: #c8c8c8;
+  color: #bababa;
   position: absolute;
   pointer-events: none;
   left: 24px;
@@ -47,7 +47,7 @@ input:valid ~ label {
 .input__icon {
   background-color: transparent;
   border: none;
-  color: #c8c8c8;
+  color: #bababa;
   font-size: 1.3rem;
   margin: 0;
   padding: 0;
