@@ -6,3 +6,14 @@
   width: 100%;
   position: relative;
 }
+
+.form__input-group {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+}
+@media screen and (max-width: 520px) {
+  .form__input-group {
+    flex-wrap: wrap;
+  }
+}

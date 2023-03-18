@@ -6,25 +6,19 @@ import { MdEmail } from 'react-icons/md';
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
 
 import SocialButtons from '../../components/SocialButtons/SocialButtons';
+import HeaderTexts from '../../components/HeaderTexts/HeaderTexts';
 
 export default function LoginPage() {
   const [showPassword, setShowPassword] = React.useState(false);
 
   return (
     <main className="main main--login">
-      <section className="texts">
-        <p className="texts__slogan">EMPIEZA GRATIS</p>
-        <h1 className="texts__title">Entrar</h1>
-        <p className="texts__subtitle">
-          ¿No tienes una cuenta?
-          <a href="">Registrarse</a>
-        </p>
-      </section>
+      <HeaderTexts />
 
       <form className="form">
         <div className="input-group">
           <input required="required" type="text" id="form__email" />
-          <label>Email</label>
+          <label htmlFor="form__email">Email</label>
           <div className="input__icon">
             <MdEmail />
           </div>
@@ -36,7 +30,7 @@ export default function LoginPage() {
             type={showPassword ? 'text' : 'password'}
             id="form__password"
           />
-          <label>Contraseña</label>
+          <label htmlFor="form__password">Contraseña</label>
           <div
             className="input__icon input__icon--password"
             onClick={() => setShowPassword(!showPassword)}>

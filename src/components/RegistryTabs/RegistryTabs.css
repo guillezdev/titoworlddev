@@ -1,0 +1,35 @@
+.resgistry-tabs {
+  background-color: #4d4f53;
+  border-radius: 1000px;
+  -webkit-border-radius: 1000px;
+  -moz-border-radius: 1000px;
+  -ms-border-radius: 1000px;
+  -o-border-radius: 1000px;
+}
+
+.resgistry-tabs a {
+  text-decoration: none;
+}
+.registry_tabs__link {
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  color: #fff;
+  border-radius: 1000px 0 0 1000px;
+  -webkit-border-radius: 1000px 0 0 1000px;
+  -moz-border-radius: 1000px 0 0 1000px;
+  -ms-border-radius: 1000px 0 0 1000px;
+  -o-border-radius: 1000px 0 0 1000px;
+}
+.registry_tabs__link:hover {
+  opacity: 0.9;
+}
+.registry_tabs__link--right {
+  border-radius: 0 1000px 1000px 0;
+  -webkit-border-radius: 0 1000px 1000px 0;
+  -moz-border-radius: 0 1000px 1000px 0;
+  -ms-border-radius: 0 1000px 1000px 0;
+  -o-border-radius: 0 1000px 1000px 0;
+}
+.registry_tabs__link--active {
+  background-color: #0083fd;
+}

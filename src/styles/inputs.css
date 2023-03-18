@@ -58,6 +58,9 @@ input:valid ~ label {
 .input__icon--password {
   cursor: pointer;
 }
+.input__icon--special path {
+  stroke: #bababa;
+}
 
 /* Esto cambia el color del autocompletado del navegador
 ya que por defecto sale en blanco */
