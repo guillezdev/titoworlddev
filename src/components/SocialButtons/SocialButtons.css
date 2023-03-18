@@ -1,0 +1,14 @@
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.button--google {
+  background-color: #fff;
+  color: #000;
+}
+
+.button--facebook {
+  background-color: #2749ff;
+}

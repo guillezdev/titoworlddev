@@ -1,0 +1,21 @@
+.button {
+  background-color: #0083fd;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0.75rem 4rem;
+  position: relative;
+
+  border-radius: 100rem;
+  -webkit-border-radius: 100rem;
+  -moz-border-radius: 100rem;
+  -ms-border-radius: 100rem;
+  -o-border-radius: 100rem;
+}
+
+.button .icon {
+  left: 1rem;
+  position: absolute;
+  top: auto;
+}

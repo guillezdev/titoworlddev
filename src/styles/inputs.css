@@ -1,0 +1,14 @@
+.input {
+  background-color: #4d4f53;
+  border: none;
+  color: #fff;
+  outline: none;
+  padding: 1rem 2rem;
+  width: 100%;
+
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+}
