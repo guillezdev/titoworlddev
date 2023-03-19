@@ -7,15 +7,45 @@ import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
 
 import SocialButtons from '../../components/SocialButtons/SocialButtons';
 import HeaderTexts from '../../components/HeaderTexts/HeaderTexts';
+import { useQuery } from '@tanstack/react-query';
+import { getUsers } from '../../api/usersAPI';
 
 export default function LoginPage() {
   const [showPassword, setShowPassword] = React.useState(false);
 
+  const {
+    isLoading,
+    data: users,
+    isError,
+    error
+  } = useQuery({
+    queryKey: ['users'],
+    queryFn: getUsers
+  });
+
+  const handleInitUserSesion = e => {
+    e.preventDefault();
+    const emailInput = document.querySelector('#form__email');
+    const passwordInput = document.querySelector('#form__password');
+
+    const user = users.find(
+      user =>
+        user.email === emailInput.value && user.password === passwordInput.value
+    );
+
+    if (!user) return console.log('El usuario no existe');
+    return console.log(
+      `El usuario ${user.name} ${user.lastName} ha iniciado sesión`
+    );
+  };
+
+  if (isLoading) return <div>Loading...</div>;
+  if (isError) return <div>Error: {error.message}</div>;
   return (
     <main className="main main--login">
       <HeaderTexts />
 
-      <form className="form">
+      <form className="form" onSubmit={handleInitUserSesion}>
         <div className="input-group">
           <input required="required" type="text" id="form__email" />
           <label htmlFor="form__email">Email</label>
