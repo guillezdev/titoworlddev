@@ -33,10 +33,15 @@ export default function LoginPage() {
         user.email === emailInput.value && user.password === passwordInput.value
     );
 
-    if (!user)
+    if (!user) {
       return console.log(
         'La contraseña y/o el email son incorrectos, o el usuario no existe.'
       );
+    } else if (user.isEstablishment) {
+      return console.log(
+        `El local ${user.name} ${user.lastName} ha iniciado sesión`
+      );
+    }
     return console.log(
       `El usuario ${user.name} ${user.lastName} ha iniciado sesión`
     );
@@ -50,7 +55,12 @@ export default function LoginPage() {
 
       <form className="form" onSubmit={handleInitUserSesion}>
         <div className="input-group">
-          <input required="required" type="text" id="form__email" />
+          <input
+            required="required"
+            type="text"
+            name="email"
+            id="form__email"
+          />
           <label htmlFor="form__email">Email</label>
           <div className="input__icon">
             <MdEmail />
@@ -61,6 +71,7 @@ export default function LoginPage() {
           <input
             required="required"
             type={showPassword ? 'text' : 'password'}
+            name="password"
             id="form__password"
           />
           <label htmlFor="form__password">Contraseña</label>

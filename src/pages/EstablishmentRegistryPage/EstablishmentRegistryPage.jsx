@@ -10,9 +10,36 @@ import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
 import { FaPhoneAlt } from 'react-icons/fa';
 import { TbBuildingEstate } from 'react-icons/tb';
 import { GrMapLocation } from 'react-icons/gr';
+import { createUser, getUsers } from '../../api/usersAPI';
+import { useMutation, useQuery } from '@tanstack/react-query';
 
 export default function EstablishmentRegistryPage() {
   const [showPassword, setShowPassword] = React.useState(false);
+
+  const { data: users } = useQuery({
+    queryKey: ['users'],
+    queryFn: getUsers
+  });
+
+  const addUserMutation = useMutation({
+    mutationFn: createUser,
+    onSuccess: () => {
+      console.log('Establishment created successfully');
+      console.log(users);
+    }
+  });
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const establishment = Object.fromEntries(formData);
+
+    addUserMutation.mutate({
+      id: users.length + 1,
+      isEstablishment: true,
+      ...establishment
+    });
+  };
 
   return (
     <>
@@ -21,10 +48,15 @@ export default function EstablishmentRegistryPage() {
       <main className="main main-registry-establishment">
         <HeaderTexts isRegistry={true} />
 
-        <form className="form">
+        <form className="form" onSubmit={handleSubmit}>
           <div className="form__input-group">
             <div className="input-group">
-              <input required="required" type="text" id="form__name" />
+              <input
+                required="required"
+                type="text"
+                name="name"
+                id="form__name"
+              />
               <label htmlFor="form__name">Nombre</label>
               <div className="input__icon">
                 <MdDescription />
@@ -32,7 +64,12 @@ export default function EstablishmentRegistryPage() {
             </div>
 
             <div className="input-group">
-              <input required="required" type="text" id="form__lastname" />
+              <input
+                required="required"
+                type="text"
+                name="lastName"
+                id="form__lastname"
+              />
               <label htmlFor="form__lastname">Apellidos</label>
               <div className="input__icon">
                 <MdDescription />
@@ -42,7 +79,12 @@ export default function EstablishmentRegistryPage() {
 
           <div className="form__input-group">
             <div className="input-group">
-              <input required="required" type="tel" id="form__phone" />
+              <input
+                required="required"
+                type="tel"
+                name="phone"
+                id="form__phone"
+              />
               <label htmlFor="form__phone">Telefono</label>
               <div className="input__icon">
                 <FaPhoneAlt />
@@ -50,8 +92,13 @@ export default function EstablishmentRegistryPage() {
             </div>
 
             <div className="input-group">
-              <input required="required" type="text" id="form__lastname" />
-              <label htmlFor="form__lastname">Dirección</label>
+              <input
+                required="required"
+                type="text"
+                name="address"
+                id="form__address"
+              />
+              <label htmlFor="form__address">Dirección</label>
               <div className="input__icon">
                 <TbBuildingEstate />
               </div>
@@ -60,15 +107,25 @@ export default function EstablishmentRegistryPage() {
 
           <div className="form__input-group">
             <div className="input-group">
-              <input required="required" type="text" id="form__name" />
-              <label htmlFor="form__name">Ciudad</label>
+              <input
+                required="required"
+                type="text"
+                name="city"
+                id="form__city"
+              />
+              <label htmlFor="form__city">Ciudad</label>
               <div className="input__icon">
                 <MdLocationCity />
               </div>
             </div>
 
             <div className="input-group">
-              <input required="required" type="text" id="form__province" />
+              <input
+                required="required"
+                type="text"
+                name="province"
+                id="form__province"
+              />
               <label htmlFor="form__province">Provincia</label>
               <div className="input__icon input__icon--special">
                 <GrMapLocation />
@@ -77,7 +134,12 @@ export default function EstablishmentRegistryPage() {
           </div>
 
           <div className="input-group">
-            <input required="required" type="text" id="form__email" />
+            <input
+              required="required"
+              type="text"
+              name="email"
+              id="form__email"
+            />
             <label htmlFor="form__email">Correo electrónico</label>
             <div className="input__icon">
               <MdEmail />
@@ -88,6 +150,7 @@ export default function EstablishmentRegistryPage() {
             <input
               required="required"
               type={showPassword ? 'text' : 'password'}
+              name="password"
               id="form__password"
             />
             <label htmlFor="form__password">Contraseña</label>

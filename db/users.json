@@ -2,11 +2,45 @@
   "users": [
     {
       "id": 1,
+      "isEstablishment": false,
       "name": "Cristian",
       "lastName": "Arias",
       "phone": "722432107",
-      "email": "titocristian.dev@gmail.com",
+      "email": "titocristian@gmail.com",
       "password": "1234+Cristian"
+    },
+    {
+      "id": 2,
+      "isEstablishment": true,
+      "name": "Cristian's",
+      "lastName": "Bar",
+      "phone": "722432107",
+      "address": "Calle 1",
+      "city": "Barcelona",
+      "province": "Barcelona",
+      "email": "titocristian@gmail.com",
+      "password": "1234+Cristian"
+    },
+    {
+      "id": 3,
+      "isEstablishment": false,
+      "name": "Pepe",
+      "lastName": "Pepito",
+      "phone": "12389475698",
+      "email": "pepe@gmail.com",
+      "password": "1234+Pepe"
+    },
+    {
+      "id": 4,
+      "isEstablishment": true,
+      "name": "Hayax",
+      "lastName": "Electronics",
+      "phone": "27365127",
+      "address": "Calle 13",
+      "city": "Madrid",
+      "province": "Madrid",
+      "email": "hayaxelectronics@gmail.com",
+      "password": "1234+Hayax"
     }
   ]
 }

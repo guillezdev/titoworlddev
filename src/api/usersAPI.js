@@ -8,3 +8,6 @@ export const getUsers = async () => {
   const res = await usersApi.get('/users');
   return res.data;
 };
+export const createUser = user => {
+  usersApi.post('/users', user);
+};
