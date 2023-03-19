@@ -2,11 +2,11 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 2.25rem;
   justify-content: center;
+  margin: auto;
   min-height: 100vh;
   padding: 1.5rem 1rem;
-  margin: auto;
   width: 40%;
   transition: var(--main-transition);
   -webkit-transition: var(--main-transition);
@@ -30,23 +30,24 @@
   }
 }
 
-.main-registry-client {
+.main-registry-client,
+.main-registry-establishment {
+  min-height: auto;
   justify-content: flex-start;
   margin-top: auto;
+}
+
+.main-registry-client {
   margin-left: 12rem;
 }
 .main-registry-establishment {
-  justify-content: flex-start;
-  margin-top: auto;
   margin-right: 12rem;
 }
 @media screen and (max-width: 1200px) {
   .main-registry-client {
-    margin-top: auto;
     margin-left: auto;
   }
   .main-registry-establishment {
-    margin-top: auto;
     margin-right: auto;
   }
 }
