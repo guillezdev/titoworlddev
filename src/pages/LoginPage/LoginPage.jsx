@@ -33,7 +33,10 @@ export default function LoginPage() {
         user.email === emailInput.value && user.password === passwordInput.value
     );
 
-    if (!user) return console.log('El usuario no existe');
+    if (!user)
+      return console.log(
+        'La contraseña y/o el email son incorrectos, o el usuario no existe.'
+      );
     return console.log(
       `El usuario ${user.name} ${user.lastName} ha iniciado sesión`
     );
